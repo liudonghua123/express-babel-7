@@ -1,18 +1,23 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'es6': true,
-    'node': true
+  parser: 'babel-eslint',
+  plugins: ['import', 'jest'],
+  env: {
+    node: true,
+    jest: true,
+    browser: true,
+    es6: true
   },
-  'extends': 'standard',
-  'globals': {
-    'Atomics': 'readonly',
-    'SharedArrayBuffer': 'readonly'
+  extends: 'eslint:recommended',
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
   },
-  'parserOptions': {
-    'ecmaVersion': 2018,
-    'sourceType': 'module'
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module'
   },
-  'rules': {
+  rules: {
+    'jest/no-focused-tests': 2,
+    'jest/no-identical-title': 2
   }
-}
+};

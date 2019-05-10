@@ -2,12 +2,13 @@
   "name": "express-babel-7",
   "version": "0.0.1",
   "description": "nodejs + express 4 + babel 7 boilerplate project",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "lint": "eslint",
-    "start": "nodemon --exec babel-node src/app.js",
+    "start": "nodemon --exec babel-node src/server.js",
     "build": "babel src --out-dir dist",
-    "serve": "node dist/app.js"
+    "serve": "node dist/server.js",
+    "test": "jest"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -21,6 +22,8 @@
     "@babel/core": "^7.4.0",
     "@babel/node": "^7.2.2",
     "@babel/preset-env": "^7.4.2",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.8.0",
     "babel-plugin-root-import": "^6.1.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
@@ -28,7 +31,10 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "nodemon": "^1.18.10"
+    "jest": "^24.8.0",
+    "nodemon": "^1.18.10",
+    "superagent": "^5.0.5",
+    "supertest": "^4.0.2"
   },
   "repository": "git@github.com:liudonghua123/express-babel-7.git",
   "author": "Donghua Liu <liudonghua123@gmail.com>",
