@@ -5,8 +5,8 @@ const router = Router()
 
 router.get('/', (req, res) => {
   res.json({
-    name: name,
-    version: version
+    name,
+    version
   })
 })
 
